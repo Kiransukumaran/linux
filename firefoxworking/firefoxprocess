@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+#shell script used to check wheather the firefox is running or not
+  
+value=`ps -ef | grep -i "/usr/lib/firefox/firefox" |grep -icv "grep"`
+if [ $value = 1 ]; then
+	#statements
+  echo "firefox is ON"
+else
+  echo "firefox is OFF"
+fi
+

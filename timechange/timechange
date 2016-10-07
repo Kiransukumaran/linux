@@ -1,0 +1,16 @@
+#!/bin/bash
+#shell script to print Good Morning, if its morning before 12pm, Good afternoon, it its after 12pm but before 4pm
+#Good evening, if its after 4pm but before 8pm and Good Night if its after 8pm and before 12am
+
+time=`date | awk '{print $4}' |cut -f1 -d":"`
+#24 hr format is obtained from above and check the condition as following
+
+if [ $time -lt 12  ]; then
+  echo "Good morning"
+elif [ $time -ge 12 -a $time -lt 16 ]; then
+  echo "Good afternoon"
+elif [ $time -ge 16 -a $time -lt 20 ]; then
+  echo "Good evening"
+elif [ $time -ge 20 -a $time -lt 24 ]; then
+  echo "Good night"  
+fi

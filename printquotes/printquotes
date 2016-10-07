@@ -1,0 +1,3 @@
+#!/bin/bash
+#shell script to print quotes inside a string
+echo "The man said \"hello\""

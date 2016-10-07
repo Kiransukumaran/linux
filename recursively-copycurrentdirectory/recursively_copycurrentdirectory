@@ -1,0 +1,7 @@
+#!/bin/bash
+#Shellscript to recursively copy all the files in the current directory to another directory. 
+#The another directory path name needs to be provided by user when prompted by the program
+echo "enter directory to copy files"
+read location
+current=`pwd`
+cp -ivr $current $location

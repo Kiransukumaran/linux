@@ -1,0 +1,10 @@
+#!/bin/bash
+#shell script to find wheather the input string is apple or not 
+echo "Enter the string"
+read stringvalue
+
+if [ $stringvalue = "apple" ]; then
+	echo "inpput string is apple"
+else
+	echo "Input string is not apple."
+fi	

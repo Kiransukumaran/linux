@@ -1,0 +1,9 @@
+#!/bin/bash
+#shellscript to check wheather the input number is less than 12
+echo "Enter the number to check"
+read inputnumber
+if [ $inputnumber -lt 12 ]; then
+	echo "Input value is less than 12."
+else
+	echo "The value is greater then 12."
+fi

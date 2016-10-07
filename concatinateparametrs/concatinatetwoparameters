@@ -1,0 +1,5 @@
+#!/bin/bash
+#Shell script to read two script parameters,concatenate and print
+
+newstring=$1$2
+echo $newstring

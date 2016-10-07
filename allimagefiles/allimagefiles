@@ -1,0 +1,6 @@
+#!/bin/bash
+#shell script to show all the jpg images in any given folder path
+echo "enter the path"
+read path
+cd $path
+ls -al | grep ".jpg"

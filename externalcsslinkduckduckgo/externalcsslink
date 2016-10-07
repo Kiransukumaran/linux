@@ -1,0 +1,5 @@
+#!/bin/bash
+#shell script to check how many external css links are there in duckduckgo.com
+wget "duckduckgo.com"
+count=`less index.html|grep -ic "<link"`
+echo "there are $count external css link "

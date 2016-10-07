@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "enter backup location"
+read location
+cp -avr /var/www/html/ $location 

@@ -1,9 +1,12 @@
 #!/bin/bash
 #shellscript to add two numbers supplied as command line arguments. 
 #If these two inputs are null or invalid, show error and its usage
-if [ $1=" " -a $2=" " ]; then
-echo "number is invalid"
+firstnumber=$1
+secondnumber=$2
+re='^[0-9]+$'
+if ! [[ $firstnumber =~ $re && $secondnumber =~ $re ]] ; then
+   echo "Not a number null or invalid" >&2;
 else
-sum=$(expr $1 + $2)
-echo $sum
+  sum=$(expr $firstnumber + $secondnumber)
+  echo "sum is" $sum
 fi

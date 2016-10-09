@@ -1,0 +1,7 @@
+#!/bin/bash
+#script to read a csv file and print all the keys
+echo "enter the csv file name"
+read name
+less $name |sed -n 1p |awk -F "," '{print NF}'
+#checking the number of fields with comma seperated
+ 

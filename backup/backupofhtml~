@@ -1,5 +1,0 @@
-#!/bin/bash
-#shellscript to backup /var/www/html to another location
-echo "enter backup location"
-read location
-cp -avuR /var/www/html/ $location 

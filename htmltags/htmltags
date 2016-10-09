@@ -1,0 +1,19 @@
+#!/bin/bash
+#shellscript to print the number of html tags in a webpage.
+#if url then wget it and searchs for the tags that is send through the parameter...url should be as www.google.com
+#else if url is not passed search for html tags inside a html file
+#else it should be a invalid link
+regex='(www).[-A-Za-z0-9\+&@#/%?=~_|!:,.;]*[-A-Za-z0-9\+&@#/%=~_|]'
+if [[ $1 =~ $regex ]]
+then 
+  wget "$1"
+  count=`less index.html|grep -o "<[^>]*>"|wc -l`
+  echo "there are $count tags"
+elif [ -z "$1" ]; then
+  echo "enter the html file name you want to search for tags"
+  read name 
+  count=`less $name|grep -o "<[^>]*>"|wc -l`
+  echo "there are $count tags" 
+else
+  echo "not a valid url"
+fi
